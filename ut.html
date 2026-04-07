@@ -63,6 +63,252 @@
             --glass-border: rgba(255, 255, 255, 0.05);
         }
 
+        /* --- BRANDING GALBIATI --- */
+        .brand-header-fixed {
+            position: fixed;
+            top: 0;
+            left: 280px;
+            right: 0;
+            height: 50px;
+            background: #0f172a;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            gap: 15px;
+            border-bottom: 2px solid var(--primary);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+        }
+
+        .brand-logo-small {
+            height: 24px;
+            width: auto;
+        }
+
+        .brand-title {
+            font-weight: 900;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        /* Better Dropdowns */
+        .rich-select-wrapper {
+            position: relative;
+        }
+
+        .rich-select-options {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            margin-top: 4px;
+            box-shadow: var(--shadow-xl);
+            z-index: 2000;
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+        }
+
+        .rich-select-option {
+            padding: 10px 16px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .rich-select-option:hover {
+            background: var(--primary-soft);
+            color: var(--primary);
+        }
+
+        /* Priority Switch */
+        .priority-toggle {
+            display: flex;
+            gap: 8px;
+            background: var(--bg-body);
+            padding: 4px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .priority-btn {
+            flex: 1;
+            padding: 8px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.7rem;
+            font-weight: 800;
+            transition: var(--transition);
+            background: transparent;
+            color: var(--text-muted);
+        }
+
+        .priority-btn.active {
+            background: var(--bg-card);
+            color: var(--text-main);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .priority-btn.active[data-prio="BASSA"] {
+            color: var(--secondary);
+        }
+
+        .priority-btn.active[data-prio="MEDIA"] {
+            color: var(--warning);
+        }
+
+        .priority-btn.active[data-prio="ALTA"] {
+            color: var(--error);
+        }
+
+        .priority-btn.active[data-prio="URGENTE"] {
+            background: var(--error);
+            color: white;
+        }
+
+        .material-modal-step-card {
+            background: white;
+            border: 1px solid var(--border-light);
+            border-radius: 24px;
+            padding: 32px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .material-modal-step-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.2);
+        }
+
+        /* --- NUOVA COMMESSA ENHANCEMENTS --- */
+        .mat-row-new {
+            display: grid;
+            grid-template-columns: 1fr 100px 48px;
+            gap: 16px;
+            align-items: center;
+            padding: 12px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            transition: var(--transition);
+            margin-bottom: 12px;
+        }
+
+        .mat-status-badge {
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-top: 6px;
+            display: inline-block;
+        }
+
+        .task-card-new {
+            padding: 24px;
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border-light);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            transition: var(--transition);
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        .task-card-new:hover {
+            border-color: var(--primary-soft);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .task-step-badge {
+            position: absolute;
+            top: -12px;
+            left: 24px;
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 900;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .summary-card {
+            background: linear-gradient(145deg, #ffffff, #f8fafc);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-xl);
+            padding: 24px;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px dashed var(--border-light);
+        }
+
+        .summary-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .summary-value {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        .rich-select-search {
+            padding: 12px;
+            border-bottom: 1px solid var(--border-light);
+            position: sticky;
+            top: 0;
+            background: var(--bg-card);
+            z-index: 10;
+        }
+
+        .rich-select-display {
+            padding: 14px 18px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            background: var(--bg-card);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .rich-select-display:hover {
+            border-color: var(--primary);
+        }
+
+
         @keyframes slideUp {
             from {
                 opacity: 0;
@@ -359,6 +605,8 @@
             justify-content: space-between;
             align-items: center;
             z-index: 40;
+            margin-top: 50px;
+            /* Space for the brand header */
         }
 
         .header h1 {
@@ -366,6 +614,7 @@
             font-weight: 800;
             letter-spacing: -0.02em;
         }
+
 
         .content {
             flex: 1;
@@ -2136,6 +2385,17 @@
 
 <body>
     <div class="app-container">
+        <!-- BRAND HEADER -->
+        <div class="brand-header-fixed" id="brand-header">
+            <div style="display:flex; align-items:center; gap:12px; height: 100%;">
+                <img src="/home/stigo/.gemini/antigravity/brain/06502447-ebd0-43f0-a016-c3df1dda0c4d/uploaded_image_1775597506181.png"
+                    class="brand-logo-small" style="height:32px; border-radius:4px;">
+                <div class="brand-title">GALBIATI FRATELLI <span
+                        style="color:var(--primary); font-weight:400; font-size:0.7rem; opacity:0.8;">| OFFICINE
+                        MECCANICHE SRL</span></div>
+            </div>
+        </div>
+
         <div class="sidebar-overlay" id="sidebar-overlay" onclick="app.toggleSidebar()"></div>
         <div class="sidebar" id="sidebar"></div>
         <div class="main-container">
@@ -2149,7 +2409,7 @@
                             <line x1="3" y1="18" x2="21" y2="18"></line>
                         </svg>
                     </div>
-                    <h1>Industrial Management Pro</h1>
+                    <h1>Control Panel</h1>
                 </div>
                 <div style="display: flex; gap: 24px; align-items: center;">
                     <div class="timer" id="timer">00:00:00</div>
@@ -2165,6 +2425,7 @@
             <div class="content" id="content"></div>
         </div>
     </div>
+
 
     <!-- COMMAND PALETTE -->
     <div id="command-palette">
@@ -2380,6 +2641,113 @@
             searchTerm: '',
             paletteIndex: 0,
 
+            getLogoUrl() {
+                // Ritorna il logo Galbiati Fratelli (placeholder se non presente)
+                return 'logo.png';
+            },
+
+            setPriority(prio) {
+                this.tempPriorita = prio;
+                document.querySelectorAll('.priority-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.prio === prio);
+                });
+                this.updateNuovaCommessaSummary();
+            },
+
+            // --- Helper Rich Selects ---
+            toggleRichSelect(id) {
+                const options = document.getElementById(`options-${id}`);
+                const isVisible = options.style.display === 'block';
+                document.querySelectorAll('.rich-select-options').forEach(o => {
+                    if (o.id !== `options-${id}`) o.style.display = 'none';
+                });
+                options.style.display = isVisible ? 'none' : 'block';
+                if (!isVisible) {
+                    const search = options.querySelector('input');
+                    if (search) search.focus();
+                }
+            },
+
+            selectRichOption(id, value, label) {
+                const display = document.getElementById(`display-${id}`);
+                const hidden = document.getElementById(id);
+                display.textContent = label;
+                display.style.color = 'var(--text-main)';
+                hidden.value = value;
+                document.getElementById(`options-${id}`).style.display = 'none';
+
+                if (id.startsWith('mat-select-')) {
+                    const idx = id.replace('mat-select-', '');
+                    this.aggiornaStockBadgeRich(value, idx);
+                }
+                this.updateNuovaCommessaSummary();
+            },
+
+            searchRichSelect(id, query) {
+                const options = document.getElementById(`options-${id}`);
+                const items = options.querySelectorAll('.rich-select-option');
+                const groups = options.querySelectorAll('optgroup, .opt-group-label');
+                const q = query.toLowerCase();
+                let visibleAny = false;
+
+                items.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    const isVisible = text.includes(q);
+                    item.style.display = isVisible ? 'block' : 'none';
+                    if (isVisible) visibleAny = true;
+                });
+            },
+
+            updateNuovaCommessaSummary() {
+                const summaryContainer = document.getElementById('nuova-commessa-summary');
+                if (!summaryContainer) return;
+
+                const prezzo = parseFloat(document.getElementById('prezzoVendita')?.value || 0);
+                const matCount = document.querySelectorAll('.materialeSelect').length;
+                const taskCount = document.querySelectorAll('.taskMansione').length;
+
+                let tempoTotale = 0;
+                document.querySelectorAll('.taskTempo').forEach(input => {
+                    tempoTotale += parseInt(input.value || 0);
+                });
+
+                document.getElementById('valorizzazione-live').textContent = `€ ${prezzo.toLocaleString('it-IT', { minimumFractionDigits: 2 })}`;
+
+                const ore = Math.floor(tempoTotale / 60);
+                const min = tempoTotale % 60;
+                const tempoStr = ore > 0 ? `${ore}h ${min}m` : `${min}m`;
+
+                summaryContainer.innerHTML = `
+                    <div class="summary-item">
+                        <span class="summary-label">Materiali</span>
+                        <span class="summary-value">${matCount} Tipologie</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Fasi Lavoro</span>
+                        <span class="summary-value">${taskCount} Step</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Tempo Stimato</span>
+                        <span class="summary-value">${tempoStr}</span>
+                    </div>
+                    <div class="summary-item" style="border:none;">
+                        <span class="summary-label">Priorità</span>
+                        <span class="summary-value" style="color: ${this.getPriorityColor(this.tempPriorita)}">${this.tempPriorita}</span>
+                    </div>
+                `;
+            },
+
+            getPriorityColor(prio) {
+                switch (prio) {
+                    case 'URGENTE': return 'var(--error)';
+                    case 'ALTA': return 'var(--warning)';
+                    case 'MEDIA': return 'var(--primary)';
+                    case 'BASSA': return 'var(--secondary)';
+                    default: return 'var(--text-muted)';
+                }
+            },
+
+
             // ==================== COMMAND PALETTE LOGIC ====================
             initCommandPalette() {
                 const input = document.getElementById('palette-input');
@@ -2539,6 +2907,17 @@
                 this.avviaAutoRefresh();
                 this.richiediPermessoNotifiche();
                 this.registerServiceWorker();
+
+                // Close rich selects on click outside
+                window.addEventListener('click', (e) => {
+                    if (!e.target.closest('.rich-select-wrapper')) {
+                        document.querySelectorAll('.rich-select-options').forEach(o => o.style.display = 'none');
+                    }
+                });
+
+                // Auto-Optimize on boot
+                setTimeout(() => this.riorganizzaTasks(), 1000);
+
                 lucide.createIcons();
                 console.log("Antigravity System Ready.");
             },
@@ -2814,18 +3193,30 @@
                     new Materiale({ id: 'MAT-001', tipo: 'FERRO', sezione: 'TUBO', tipoSezione: 'QUADRO', misura: '40x40x2 mm', quantitaMagazzino: 150, fornitore: 'Acciaierie Venete' }),
                     new Materiale({ id: 'MAT-002', tipo: 'FERRO', sezione: 'TUBO', tipoSezione: 'QUADRO', misura: '50x50x3 mm', quantitaMagazzino: 120, fornitore: 'Acciaierie Venete' }),
                     new Materiale({ id: 'MAT-003', tipo: 'FERRO', sezione: 'TUBO', tipoSezione: 'RETTANGOLO', misura: '60x40x3 mm', quantitaMagazzino: 80, fornitore: 'Acciaierie Venete' }),
+                    new Materiale({ id: 'MAT-F-T-R-1', tipo: 'FERRO', sezione: 'TUBO', tipoSezione: 'RETTANGOLO', misura: '10x20x1.5 mm', quantitaMagazzino: 300, fornitore: 'Acciaierie Venete' }),
+                    new Materiale({ id: 'MAT-F-T-R-2', tipo: 'FERRO', sezione: 'TUBO', tipoSezione: 'RETTANGOLO', misura: '20x40x1.5 mm', quantitaMagazzino: 250, fornitore: 'Acciaierie Venete' }),
+                    new Materiale({ id: 'MAT-F-T-R-3', tipo: 'FERRO', sezione: 'TUBO', tipoSezione: 'RETTANGOLO', misura: '20x60x1.5 mm', quantitaMagazzino: 200, fornitore: 'Acciaierie Venete' }),
+                    new Materiale({ id: 'MAT-F-T-R-4', tipo: 'FERRO', sezione: 'TUBO', tipoSezione: 'RETTANGOLO', misura: '30x40x1.5 mm', quantitaMagazzino: 180, fornitore: 'Acciaierie Venete' }),
+                    new Materiale({ id: 'MAT-F-T-R-5', tipo: 'FERRO', sezione: 'TUBO', tipoSezione: 'RETTANGOLO', misura: '30x60x1.5 mm', quantitaMagazzino: 150, fornitore: 'Acciaierie Venete' }),
+                    new Materiale({ id: 'MAT-F-T-R-6', tipo: 'FERRO', sezione: 'TUBO', tipoSezione: 'RETTANGOLO', misura: '50x100x2 mm', quantitaMagazzino: 100, fornitore: 'Acciaierie Venete' }),
                     new Materiale({ id: 'MAT-004', tipo: 'FERRO', sezione: 'BARRA', tipoSezione: 'TONDO', misura: 'Ø20 mm', quantitaMagazzino: 200, fornitore: 'Feralpi' }),
                     new Materiale({ id: 'MAT-005', tipo: 'FERRO', sezione: 'BARRA', tipoSezione: 'RETTANGOLO', misura: '30x10 mm', quantitaMagazzino: 150, fornitore: 'Feralpi' }),
                     new Materiale({ id: 'MAT-006', tipo: 'FERRO', sezione: 'PROFILI', misura: 'L 40x40x4 mm', quantitaMagazzino: 90, fornitore: 'Acciaierie Venete' }),
                     new Materiale({ id: 'MAT-007', tipo: 'FERRO', sezione: 'PROFILI', misura: 'L 50x50x5 mm', quantitaMagazzino: 70, fornitore: 'Acciaierie Venete' }),
                     new Materiale({ id: 'MAT-008', tipo: 'FERRO', sezione: 'LASTRA', misura: '1000x2000x2 mm', quantitaMagazzino: 25, fornitore: 'Arvedi' }),
                     new Materiale({ id: 'MAT-009', tipo: 'FERRO', sezione: 'LASTRA', misura: '1500x3000x3 mm', quantitaMagazzino: 15, fornitore: 'Arvedi' }),
+                    new Materiale({ id: 'MAT-F-T-R-7', tipo: 'FERRO', sezione: 'TUBO', tipoSezione: 'RETTANGOLO', misura: '40x80x2 mm', quantitaMagazzino: 120, fornitore: 'Acciaierie Venete' }),
+                    new Materiale({ id: 'MAT-F-T-R-8', tipo: 'FERRO', sezione: 'TUBO', tipoSezione: 'RETTANGOLO', misura: '40x80x3 mm', quantitaMagazzino: 110, fornitore: 'Acciaierie Venete' }),
+                    new Materiale({ id: 'MAT-F-T-R-9', tipo: 'FERRO', sezione: 'TUBO', tipoSezione: 'RETTANGOLO', misura: '50x100x3 mm', quantitaMagazzino: 90, fornitore: 'Acciaierie Venete' }),
+                    new Materiale({ id: 'MAT-F-T-R-10', tipo: 'FERRO', sezione: 'TUBO', tipoSezione: 'RETTANGOLO', misura: '50x100x4 mm', quantitaMagazzino: 80, fornitore: 'Acciaierie Venete' }),
 
                     // ACCIAIO INOX
                     new Materiale({ id: 'MAT-010', tipo: 'ACCIAIO INOX', sezione: 'TUBO', tipoSezione: 'TONDO', misura: 'Ø42.4x2 mm AISI304', quantitaMagazzino: 60, fornitore: 'Inox Mare' }),
                     new Materiale({ id: 'MAT-011', tipo: 'ACCIAIO INOX', sezione: 'TUBO', tipoSezione: 'QUADRO', misura: '40x40x2 mm AISI316', quantitaMagazzino: 45, fornitore: 'Inox Mare' }),
                     new Materiale({ id: 'MAT-012', tipo: 'ACCIAIO INOX', sezione: 'BARRA', tipoSezione: 'RETTANGOLO', misura: '40x10 mm AISI304', quantitaMagazzino: 80, fornitore: 'Inox Mare' }),
                     new Materiale({ id: 'MAT-013', tipo: 'ACCIAIO INOX', sezione: 'LASTRA', misura: '1000x2000x2 mm AISI304', quantitaMagazzino: 12, fornitore: 'Inox Mare' }),
+                    new Materiale({ id: 'MAT-I-T-R-1', tipo: 'ACCIAIO INOX', sezione: 'TUBO', tipoSezione: 'RETTANGOLO', misura: '20x40x1.5 mm AISI304', quantitaMagazzino: 100, fornitore: 'Inox Mare' }),
+                    new Materiale({ id: 'MAT-I-T-R-2', tipo: 'ACCIAIO INOX', sezione: 'TUBO', tipoSezione: 'RETTANGOLO', misura: '30x60x2 mm AISI304', quantitaMagazzino: 70, fornitore: 'Inox Mare' }),
 
                     // OTTONE
                     new Materiale({ id: 'MAT-014', tipo: 'OTTONE', sezione: 'BARRA', tipoSezione: 'TONDO', misura: 'Ø20 mm', quantitaMagazzino: 40, fornitore: 'Metalli Nord' }),
@@ -2836,7 +3227,9 @@
                     new Materiale({ id: 'MAT-017', tipo: 'ALLUMINIO', sezione: 'TUBO', tipoSezione: 'TONDO', misura: 'Ø40x2 mm', quantitaMagazzino: 70, fornitore: 'Alluminio Italia' }),
                     new Materiale({ id: 'MAT-018', tipo: 'ALLUMINIO', sezione: 'BARRA', tipoSezione: 'QUADRO', misura: '30x30 mm', quantitaMagazzino: 90, fornitore: 'Alluminio Italia' }),
                     new Materiale({ id: 'MAT-019', tipo: 'ALLUMINIO', sezione: 'PROFILI', misura: 'L 40x40x3 mm', quantitaMagazzino: 50, fornitore: 'Alluminio Italia' }),
-                    new Materiale({ id: 'MAT-020', tipo: 'ALLUMINIO', sezione: 'LASTRA', misura: '1000x2000x2 mm', quantitaMagazzino: 20, fornitore: 'Alluminio Italia' })
+                    new Materiale({ id: 'MAT-020', tipo: 'ALLUMINIO', sezione: 'LASTRA', misura: '1000x2000x2 mm', quantitaMagazzino: 20, fornitore: 'Alluminio Italia' }),
+                    new Materiale({ id: 'MAT-A-T-R-1', tipo: 'ALLUMINIO', sezione: 'TUBO', tipoSezione: 'RETTANGOLO', misura: '20x40x2 mm', quantitaMagazzino: 150, fornitore: 'Alluminio Italia' }),
+                    new Materiale({ id: 'MAT-A-T-R-2', tipo: 'ALLUMINIO', sezione: 'TUBO', tipoSezione: 'RETTANGOLO', misura: '40x80x2 mm', quantitaMagazzino: 100, fornitore: 'Alluminio Italia' })
                 ];
 
                 // ============= CLIENTI =============
@@ -3191,9 +3584,10 @@
 
                 sb.innerHTML = `
                     <div class="sidebar-logo">
-                        <h2><span>⚡</span> ANTIGRAVITY</h2>
-                        <small>INDUSTRIAL OS • v2.8</small>
+                        <h2 style="font-family: serif; letter-spacing: 0.1em;"><img src="${app.getLogoUrl()}" style="height:24px; filter:brightness(0) invert(1);"> GALBIATI</h2>
+                        <small>OFFICINE MECCANICHE • v3.0</small>
                     </div>
+
                     <nav id="sidebar-nav">
                         ${navMap.map(section => `
                             <div class="nav-section">${section.label}</div>
@@ -3433,10 +3827,13 @@
                             <p style="color:var(--text-muted); font-size:1rem; font-weight:600;">Situazione officina in tempo reale.</p>
                         </div>
                         <div style="display:flex; gap:12px;">
-                             <div style="background:var(--success-soft); color:var(--success); padding:10px 20px; border-radius:14px; font-weight:800; font-size:0.85rem; display:flex; align-items:center; gap:8px; border:1px solid rgba(16,185,129,0.2)">
+                             <button class="btn btn-primary btn-small" onclick="app.riorganizzaTasks()" style="border-radius:14px; padding:0 24px; background:linear-gradient(135deg, var(--primary), #4f46e5); color:white; border:none; display:flex; align-items:center; gap:10px; font-weight:900; box-shadow:0 8px 20px -6px rgba(79,70,229,0.5);">
+                                <i data-lucide="zap" style="width:16px;"></i> OTTIMIZZA WORKFLOW
+                             </button>
+                             <div style="background:white; color:var(--success); padding:10px 20px; border-radius:14px; font-weight:800; font-size:0.85rem; display:flex; align-items:center; gap:8px; border:1px solid var(--border-light); box-shadow:var(--shadow-sm);">
                                 <span class="ariadne-dot active" style="background:var(--success)"></span> ${activeOperators} OPERATORI ATTIVI
                              </div>
-                             <button class="btn btn-secondary btn-small" onclick="app.navigate('notifiche')" style="border-radius:14px; padding:0 18px;">🔔 Notifiche (${this.state.notifiche.length})</button>
+                             <button class="btn btn-secondary btn-small" onclick="app.navigate('notifiche')" style="border-radius:14px; padding:0 18px; background:white; color:var(--text-main); border:1px solid var(--border-light);">🔔 (${this.state.notifiche.length})</button>
                         </div>
                     </div>
 
@@ -3677,147 +4074,178 @@
 
             // ==================== NUOVA COMMESSA ====================
             renderNuovaCommessa(container) {
+                this.tempPriorita = 'MEDIA';
                 container.innerHTML = `
-                    <div class="animate-fade-up">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 32px;">
+                    <div class="animate-fade-up" style="padding-bottom: 120px;">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom: 40px; border-bottom: 1px solid var(--border-light); padding-bottom: 24px;">
                             <div>
-                                <h2 style="font-weight:900; letter-spacing:-0.04em; margin:0; font-size: 2rem;">🚀 Configurazione Nuova Commessa</h2>
-                                <p style="color:var(--text-muted); font-size:1.1rem; margin-top: 4px;">Pianifica la produzione e assegna le risorse in pochi click.</p>
+                                <h1 style="font-weight:900; letter-spacing:-0.05em; margin:0; font-size: 2.5rem; color: var(--text-main); display:flex; align-items:center; gap:16px;">
+                                    <div style="width:50px; height:50px; border-radius:16px; background:linear-gradient(135deg, var(--primary), var(--primary-hover)); color:white; display:flex; align-items:center; justify-content:center; font-size:1.5rem; box-shadow:var(--shadow-indigo);">📋</div>
+                                    Nuova Commessa Galbiati
+                                </h1>
+                                <p style="color:var(--text-muted); font-size:1.1rem; margin-top: 8px; font-weight: 500;">Configurazione avanzata dell'ordine di produzione e specifiche tecniche.</p>
                             </div>
-                            <button class="btn btn-secondary" onclick="app.navigate('dashboard')" style="padding: 12px 24px; border-radius: 14px; font-weight: 700;">Annulla</button>
+                            <div style="display:flex; gap:12px;">
+                                <button class="btn btn-secondary" onclick="app.navigate('dashboard')" style="padding: 12px 24px; border-radius: 14px; font-weight: 700;">
+                                    <i data-lucide="x-circle" style="width:18px;"></i> Annulla
+                                </button>
+                                <button class="btn btn-primary" onclick="app.creaCommessa()" style="padding: 12px 32px; border-radius: 14px; font-weight: 800; font-size: 1rem; box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);">
+                                    AVVIA PRODUZIONE 🚀
+                                </button>
+                            </div>
                         </div>
 
-                        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:32px;">
-                             <!-- Colonna 1: Dati Identificativi -->
-                             <div class="card" style="padding: 32px;">
-                                <div style="display:flex; align-items:center; gap:12px; margin-bottom: 24px;">
-                                    <div style="width:40px; height:40px; border-radius:12px; background:var(--primary-soft); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:1.2rem;">📋</div>
-                                    <h3 style="margin:0; font-size:1.25rem; font-weight:800;">Informazioni Generali</h3>
-                                </div>
-                                
-                                <div style="display:grid; grid-template-columns: 1fr 140px; gap:20px; margin-bottom: 24px;">
-                                    <div class="form-group">
-                                        <label class="form-label" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); font-weight:800;">Codice Commessa</label>
-                                        <input type="text" id="codice" placeholder="Es. JOB-2024-001" class="form-control" style="font-size:1.1rem; font-weight:700; font-family:monospace;">
+                        <div style="display:grid; grid-template-columns: 1.2fr 0.8fr; gap:40px;">
+                             <!-- Colonna 1: Dati Identificativi & Materiali -->
+                             <div style="display:flex; flex-direction:column; gap:32px;">
+                                <div class="card" style="padding: 32px; border-left: 8px solid var(--primary); position:relative;">
+                                    <h3 style="margin:0 0 24px 0; font-size:1.3rem; font-weight:800; display:flex; align-items:center; gap:10px;">
+                                        <i data-lucide="file-text" style="color:var(--primary);"></i> Dati Primari
+                                    </h3>
+                                    
+                                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px; margin-bottom: 24px;">
+                                        <div class="form-group">
+                                            <label class="form-label" style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted); font-weight:800; margin-bottom:8px;">Protocollo JOB</label>
+                                            <input type="text" id="codice" placeholder="JOB-2024-..." value="JOB-${new Date().getFullYear()}-${Math.floor(Math.random() * 9000) + 1000}" class="form-control" style="font-size:1.1rem; font-weight:700; font-family:monospace; background-color: var(--bg-body); border-style:dashed;">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted); font-weight:800; margin-bottom:8px;">Livello Urgenza</label>
+                                            <div class="priority-toggle">
+                                                <button class="priority-btn" data-prio="BASSA" onclick="app.setPriority('BASSA')">Bassa</button>
+                                                <button class="priority-btn active" data-prio="MEDIA" onclick="app.setPriority('MEDIA')">Media</button>
+                                                <button class="priority-btn" data-prio="ALTA" onclick="app.setPriority('ALTA')">Alta</button>
+                                                <button class="priority-btn" data-prio="URGENTE" onclick="app.setPriority('URGENTE')">Urgent</button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="form-label" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); font-weight:800;">Priorità</label>
-                                        <select id="priorita" class="form-control" style="font-weight:700;">
-                                            <option value="BASSA">⚪ Bassa</option>
-                                            <option value="MEDIA" selected>🟡 Media</option>
-                                            <option value="ALTA">🔴 Alta</option>
-                                            <option value="URGENTE">🔥 Urgente</option>
-                                        </select>
+
+                                    <div class="form-group" style="margin-bottom: 24px;">
+                                        <label class="form-label" style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted); font-weight:800; margin-bottom:8px;">Cliente Committente</label>
+                                        <div class="rich-select-wrapper">
+                                            <input type="hidden" id="clienteId">
+                                            <div id="display-clienteId" class="rich-select-display" onclick="app.toggleRichSelect('clienteId')">
+                                                Seleziona o cerca un cliente...
+                                                <i data-lucide="chevron-down" style="width:18px; color:var(--text-muted);"></i>
+                                            </div>
+                                            <div id="options-clienteId" class="rich-select-options">
+                                                <div class="rich-select-search">
+                                                    <input type="text" placeholder="Cerca cliente..." class="form-control" oninput="app.searchRichSelect('clienteId', this.value)" style="height:38px; font-size:0.85rem;">
+                                                </div>
+                                                <div class="rich-select-items">
+                                                    ${this.state.clienti.map(c => `
+                                                        <div class="rich-select-option" onclick="app.selectRichOption('clienteId', '${c.id}', '${c.nome}')">
+                                                            <div style="font-weight:700;">${c.nome}</div>
+                                                            <div style="font-size:0.7rem; opacity:0.7;">${c.email || 'Nessuna email'}</div>
+                                                        </div>
+                                                    `).join('')}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" style="margin-bottom: 24px;">
+                                        <label class="form-label" style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted); font-weight:800; margin-bottom:8px;">Nome Articolo / Lavorazione</label>
+                                        <input type="text" id="articolo" placeholder="Es: Basamento pressa idraulica..." class="form-control" style="font-weight: 600; font-size:1.1rem;">
+                                    </div>
+
+                                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px;">
+                                        <div class="form-group">
+                                            <label class="form-label" style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted); font-weight:800; margin-bottom:8px;">Valore (€)</label>
+                                            <div style="position:relative;">
+                                                <input type="number" id="prezzoVendita" placeholder="0.00" class="form-control" step="0.01" style="padding-left: 30px; font-weight: 700; font-size:1.1rem;" oninput="app.updateNuovaCommessaSummary()">
+                                                <span style="position:absolute; left:12px; top:50%; transform:translateY(-50%); font-weight:900; color:var(--text-muted);">€</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted); font-weight:800; margin-bottom:8px;">Target Delivery</label>
+                                            <input type="date" id="dataConsegna" class="form-control" style="font-weight: 600; font-size:1.1rem;">
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="form-group" style="margin-bottom: 24px;">
-                                    <label class="form-label" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); font-weight:800;">Cliente</label>
-                                    <select id="clienteId" class="form-control">
-                                        <option value="">Seleziona un cliente...</option>
-                                        ${this.state.clienti.map(c => `<option value="${c.id}">${c.nome}</option>`).join('')}
-                                    </select>
-                                </div>
-
-                                <div class="form-group" style="margin-bottom: 24px;">
-                                    <label class="form-label" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); font-weight:800;">Articolo / Prodotto</label>
-                                    <input type="text" id="articolo" placeholder="Nome o codice articolo interno" class="form-control">
-                                </div>
-
-                                <div class="form-group" style="margin-bottom: 24px;">
-                                    <label class="form-label" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); font-weight:800;">Valore Commessa (€)</label>
-                                    <input type="number" id="prezzoVendita" placeholder="Prezzo di vendita stimato" class="form-control" step="0.01">
-                                </div>
-
-                                <div class="form-group" style="margin-bottom: 24px;">
-                                    <label class="form-label" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); font-weight:800;">Note / Descrizione</label>
-                                    <textarea id="descrizione" rows="3" placeholder="Note tecniche o istruzioni speciali..." class="form-control"></textarea>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="form-label" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); font-weight:800;">Data Consegna Prevista</label>
-                                    <input type="date" id="dataConsegna" class="form-control">
+                                <!-- Sezione Materiali -->
+                                <div class="card" style="padding: 32px; border-left: 8px solid #0ea5e9;">
+                                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px;">
+                                        <h3 style="margin:0; font-size:1.3rem; font-weight:800; display:flex; align-items:center; gap:10px;">
+                                            <i data-lucide="package" style="color:#0ea5e9;"></i> Inventario Necessario
+                                        </h3>
+                                        <button class="btn btn-secondary btn-small" onclick="app.aggiungiMaterialeForm()" style="border-radius:10px; background:#e0f2fe; color:#0369a1; border:none;">
+                                            <i data-lucide="plus" style="width:14px;"></i> Aggiungi
+                                        </button>
+                                    </div>
+                                    <div id="materialiContainer" style="display:flex; flex-direction:column; gap:4px;"></div>
                                 </div>
                              </div>
 
-                             <!-- Colonna 2: Materiali e Ciclo -->
+                             <!-- Colonna 2: Ciclo Produzione & Summary -->
                              <div style="display:flex; flex-direction:column; gap:32px;">
-                                <!-- Sezione Materiali -->
-                                <div class="card" style="padding: 32px; border-left: 6px solid var(--primary);">
-                                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px;">
-                                        <div style="display:flex; align-items:center; gap:12px;">
-                                            <div style="width:40px; height:40px; border-radius:12px; background:var(--primary-soft); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:1.2rem;">📦</div>
-                                            <h3 style="margin:0; font-size:1.25rem; font-weight:800;">Distinta Base</h3>
-                                        </div>
-                                        <button class="btn btn-secondary btn-small" onclick="app.aggiungiMaterialeForm()">➕ Aggiungi</button>
+                                <!-- Live Summary Panel -->
+                                <div class="summary-card animate-fade-in" style="border-top: 6px solid var(--success);">
+                                    <h4 style="margin:0 0 20px 0; font-size:1rem; font-weight:800; text-transform:uppercase; color:var(--success); letter-spacing:0.1em;">Analisi Live Commessa</h4>
+                                    <div id="nuova-commessa-summary">
+                                        <!-- Dynamic content -->
                                     </div>
-                                    <div id="materialiContainer" style="display:flex; flex-direction:column; gap:12px;"></div>
+                                    <div style="margin-top:24px; padding:16px; background:var(--bg-body); border-radius:12px; text-align:center;">
+                                        <div style="font-size:0.7rem; font-weight:800; color:var(--text-muted); text-transform:uppercase; margin-bottom:4px;">Incentivo Team Stimato</div>
+                                        <div style="font-size:1.4rem; font-weight:900; color:var(--primary);" id="valorizzazione-live">€ 0.00</div>
+                                    </div>
                                 </div>
 
-                                <!-- Sezione Ciclo -->
-                                <div class="card" style="padding: 32px; border-left: 6px solid var(--success);">
+                                <!-- Sezione Workflow -->
+                                <div class="card" style="padding: 32px; border-left: 8px solid #f59e0b;">
                                     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px;">
-                                        <div style="display:flex; align-items:center; gap:12px;">
-                                            <div style="width:40px; height:40px; border-radius:12px; background:var(--success-soft); color:var(--success); display:flex; align-items:center; justify-content:center; font-size:1.2rem;">⚙️</div>
-                                            <h3 style="margin:0; font-size:1.25rem; font-weight:800;">Ciclo Produzione</h3>
-                                        </div>
-                                        <button class="btn btn-secondary btn-small" onclick="app.aggiungiTaskForm()">➕ Fase</button>
+                                        <h3 style="margin:0; font-size:1.3rem; font-weight:800; display:flex; align-items:center; gap:10px;">
+                                            <i data-lucide="activity" style="color:#f59e0b;"></i> Ciclo di Produzione
+                                        </h3>
+                                        <button class="btn btn-secondary btn-small" onclick="app.aggiungiTaskForm()" style="border-radius:10px; background:#fef3c7; color:#b45309; border:none;">
+                                            <i data-lucide="plus" style="width:14px;"></i> Step
+                                        </button>
                                     </div>
                                     <div id="tasksContainer" style="display:flex; flex-direction:column; gap:16px;"></div>
                                 </div>
                              </div>
                         </div>
 
-                        <div style="margin-top: 48px; text-align: center; background: white; padding: 32px; border-radius: 24px; border: 1px solid var(--border-light); display: flex; align-items: center; justify-content: center; gap: 32px;">
-                            <div style="text-align: left;">
-                                <h4 style="margin:0; font-weight: 800; font-size: 1.2rem;">Pronto per il rilascio?</h4>
-                                <p style="margin:4px 0 0; color:var(--text-muted); font-size: 0.9rem;">Verifica i dati prima di confermare l'ordine di produzione.</p>
+                        <!-- Info Note Footer -->
+                        <div class="card" style="margin-top:32px; padding:24px; background:linear-gradient(to right, var(--primary-soft), transparent); border:none;">
+                            <div class="form-group" style="margin:0">
+                                <label class="form-label" style="font-size:0.75rem; font-weight:800; color:var(--primary); text-transform:uppercase; margin-bottom:12px; display:block;">Specifiche Tecniche & Note Operative</label>
+                                <textarea id="descrizione" rows="4" placeholder="Inserisci tolleranze, finiture o note per i capi turno..." class="form-control" style="background:white; border:none; border-radius:16px; padding:20px; font-size:1rem; box-shadow:var(--shadow-sm);"></textarea>
                             </div>
-                            <button class="btn btn-primary" onclick="app.creaCommessa()" style="padding: 16px 48px; font-size: 1.1rem; border-radius: 16px; font-weight: 800;">Crea ed Avvia Commessa 🚀</button>
                         </div>
                     </div>
                 `;
                 this.aggiungiMaterialeForm();
                 this.aggiungiTaskForm();
+                this.updateNuovaCommessaSummary();
+                lucide.createIcons();
             },
+
 
             aggiungiMaterialeForm() {
                 const container = document.getElementById('materialiContainer');
                 if (!container) return;
                 const idx = container.children.length;
-
-                // Raggruppa materiali per 'tipo'
-                const gruppi = {};
-                this.state.materiali.forEach(m => {
-                    if (!gruppi[m.tipo]) gruppi[m.tipo] = [];
-                    gruppi[m.tipo].push(m);
-                });
-
                 const div = document.createElement('div');
-                div.className = 'form-row';
-                div.style = "padding:20px; background:white; border-radius:16px; border:1px solid var(--border-light); display:grid; grid-template-columns: 1fr 120px 40px; gap:16px; align-items:center; margin-bottom:12px; box-shadow:var(--shadow-sm);";
-                div.id = `mat-${idx}`;
+                div.className = 'mat-row-new';
+                div.id = `mat-row-${idx}`;
                 div.innerHTML = `
-                    <select class="form-control materialeSelect" onchange="app.cambiaMaterialeSelezionato(this, ${idx})" style="font-weight:600; color:var(--text-main);">
-                        <option value="">Scegli materiale...</option>
-                        ${Object.keys(gruppi).sort().map(tipo => `
-                            <optgroup label="📂 ${tipo}">
-                                ${gruppi[tipo].sort((a, b) => (a.sezione + a.misura).localeCompare(b.sezione + b.misura)).map(m => `
-                                    <option value="${m.id}" data-quantita="${m.quantitaMagazzino}">
-                                        ${m.sezione} ${m.misura} (Disp: ${m.quantitaMagazzino}m)
-                                    </option>
-                                `).join('')}
-                            </optgroup>
-                        `).join('')}
-                    </select>
-                    <div style="position:relative;">
-                        <input type="number" class="form-control materialeQty" placeholder="Qtà" min="1" value="1" style="padding-right:30px; text-align:center; font-weight:800; border-color:var(--primary-soft);">
-                        <span style="position:absolute; right:10px; top:50%; transform:translateY(-50%); font-size:0.6rem; color:var(--text-muted); font-weight:800;">MT</span>
+                    <div style="flex:1;">
+                        <input type="hidden" class="materialeSelect" id="mat-select-${idx}">
+                        <div id="display-mat-select-${idx}" class="rich-select-display" onclick="app.apriRicercaMateriale(${idx})" style="background:white; border:1px solid var(--border-light); padding:12px 16px; border-radius:12px; font-weight:600; cursor:pointer; color:var(--text-muted); font-size:0.85rem;">
+                            <i data-lucide="search" style="width:16px; margin-right:8px;"></i> Seleziona Materiale (Ricerca Tecnica)...
+                        </div>
+                        <div id="status-mat-select-${idx}" class="mat-status-badge" style="display:none;"></div>
                     </div>
-                    <button class="btn-danger" style="width:40px; height:40px; border-radius:12px; padding:0; display:flex; align-items:center; justify-content:center; transition:var(--transition); border:none; color:white; cursor:pointer;" onclick="this.parentElement.remove()" title="Rimuovi">✕</button>
+                    <div style="width:100px;">
+                        <input type="number" class="form-control materialeQty" placeholder="Q.tà" oninput="app.checkMaterialAvailability(this, ${idx})" style="height:48px; border-radius:12px; font-weight:800; text-align:center; border:1px solid var(--border-light);">
+                    </div>
+                    <button class="btn-danger" style="width:48px; height:48px; border-radius:12px; padding:0; display:flex; align-items:center; justify-content:center; font-size:0.8rem; background:var(--border-light); color:var(--text-muted); border:none;" onclick="this.parentElement.remove(); app.updateNuovaCommessaSummary()">✕</button>
                 `;
                 container.appendChild(div);
-                gsap.from(div, { y: 10, opacity: 0, duration: 0.4, ease: "back.out(1.7)" });
+                lucide.createIcons({ attrs: { "stroke-width": 2.5 }, parent: div });
+                gsap.from(div, { x: 20, opacity: 0, duration: 0.4, ease: "power2.out" });
+                this.updateNuovaCommessaSummary();
             },
 
             aggiungiTaskForm() {
@@ -3825,46 +4253,59 @@
                 if (!container) return;
                 const idx = container.children.length;
                 const div = document.createElement('div');
-                div.className = 'form-row';
-                div.style = "padding:20px; background:var(--bg-body); border-radius:16px; border:1px solid var(--border-light); display:flex; flex-direction:column; gap:12px;";
-                div.id = `task-${idx}`;
+                div.className = 'task-card-new';
+                div.id = `task-row-${idx}`;
                 div.innerHTML = `
-                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-                        <span style="font-size:0.7rem; font-weight:800; color:var(--success); text-transform:uppercase; letter-spacing:0.05em;">Fase di Lavorazione ${idx + 1}</span>
-                        <button class="btn-danger" style="width:24px; height:24px; border-radius:6px; padding:0; display:flex; align-items:center; justify-content:center; font-size:0.7rem;" onclick="this.parentElement.parentElement.remove()">✕</button>
+                    <div class="task-step-badge">
+                        <i data-lucide="hash" style="width:12px;"></i> STEP ${idx + 1}
                     </div>
-                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
-                        <select class="form-control taskMansione" onchange="app.cambiaMansioneTask(this, ${idx})" style="background:white;">
-                            <option value="">Mansione...</option>
-                            ${this.state.mansioni.map(m => `<option value="${m.id}">${m.nome}</option>`).join('')}
-                        </select>
-                        <select class="form-control taskDipendente" style="background:white;">
-                            <option value="">Operatore...</option>
-                        </select>
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:4px; margin-bottom:12px;">
+                        <span style="font-size:0.75rem; font-weight:800; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.05em;">Specifiche Fase</span>
+                        <button class="btn-danger" style="width:28px; height:28px; border-radius:8px; padding:0; display:flex; align-items:center; justify-content:center; font-size:0.8rem; background:var(--border-light); color:var(--text-muted); border:none;" onclick="this.parentElement.parentElement.remove(); app.updateNuovaCommessaSummary()">✕</button>
                     </div>
-                    <div style="display:grid; grid-template-columns: 1fr 100px; gap:12px;">
-                        <select class="form-control taskLavorazioni" multiple style="height: 60px; font-size: 0.8rem; background:white; border-radius: 8px;">
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin-bottom:16px;">
+                        <div class="form-group" style="margin:0">
+                            <select class="form-control taskMansione" onchange="app.cambiaMansioneTask(this, ${idx}); app.updateNuovaCommessaSummary();" style="background:var(--bg-body); font-weight:700; border:1px solid var(--border-light); height:48px; border-radius:12px;">
+                                <option value="">Mansione...</option>
+                                ${this.state.mansioni.map(m => `<option value="${m.id}">${m.nome}</option>`).join('')}
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin:0">
+                            <select class="form-control taskDipendente" style="background:var(--bg-body); font-weight:600; border:1px solid var(--border-light); height:48px; border-radius:12px;">
+                                <option value="">Assegna a...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="display:grid; grid-template-columns: 1fr 120px; gap:16px;">
+                        <select class="form-control taskLavorazioni" multiple style="height: 100px; font-size: 0.8rem; background:white; border:1px solid var(--border-light); border-radius:12px; padding:10px;">
                         </select>
                         <div style="position:relative;">
-                            <input type="number" class="form-control taskTempo" placeholder="Min" value="60" style="background:white; padding-right:32px; font-weight:700; text-align: center;">
-                            <span style="position:absolute; right:12px; top:50%; transform:translateY(-50%); font-size:0.6rem; color:var(--text-muted); font-weight:800;">MIN</span>
+                             <label style="font-size:0.6rem; font-weight:800; color:var(--text-muted); text-transform:uppercase; display:block; margin-bottom:4px;">Tempo (min)</label>
+                            <input type="number" class="form-control taskTempo" placeholder="Min" value="60" oninput="app.updateNuovaCommessaSummary()" style="background:var(--bg-body); font-weight:900; text-align: center; height: 52px; font-size:1.2rem; border:none; border-radius:14px; color:var(--primary);">
                         </div>
                     </div>
                 `;
                 container.appendChild(div);
-                gsap.from(div, { x: -20, opacity: 0, duration: 0.3 });
+                lucide.createIcons({ attrs: { "stroke-width": 2.5 }, parent: div });
+                gsap.from(div, { scale: 0.95, opacity: 0, duration: 0.3, ease: "back.out(1.2)" });
+                this.updateNuovaCommessaSummary();
             },
 
             cambiaMansioneTask(select, idx) {
                 const mansioneId = select.value;
-                const container = select.parentElement.parentElement;
-                const dipSelect = container.querySelector('.taskDipendente');
-                const lavSelect = container.querySelector('.taskLavorazioni');
+                const taskCard = select.closest('.task-card-new');
+                if (!taskCard) return;
+
+                const dipSelect = taskCard.querySelector('.taskDipendente');
+                const lavSelect = taskCard.querySelector('.taskLavorazioni');
+
                 dipSelect.innerHTML = '<option value="">Operatore qualificato...</option>';
                 lavSelect.innerHTML = '';
+
                 if (mansioneId) {
                     const mansione = this.state.mansioni.find(m => m.id === mansioneId);
                     const dipendentiQualificati = this.state.dipendenti.filter(d => d.mansioniId.includes(mansioneId));
+
                     dipendentiQualificati.forEach(d => {
                         const option = document.createElement('option');
                         option.value = d.id;
@@ -3886,9 +4327,196 @@
                         }
                     }
 
-                    const tempoInput = container.querySelector('.taskTempo');
+                    const tempoInput = taskCard.querySelector('.taskTempo');
                     if (tempoInput && mansione.tempoMedio) tempoInput.value = mansione.tempoMedio;
                 }
+            },
+
+            // --- NUOVE FUNZIONALITA MODALE MATERIALE ---
+            tempMatRowIdx: null,
+            matStepFilters: {},
+
+            apriRicercaMateriale(rowIdx) {
+                this.tempMatRowIdx = rowIdx;
+                this.matStepFilters = {};
+                const modal = document.getElementById('materialModal');
+                modal.style.display = 'flex';
+                this.renderMaterialModalStep(1);
+                lucide.createIcons({ parent: modal });
+            },
+
+            chiudiMaterialModal() {
+                document.getElementById('materialModal').style.display = 'none';
+            },
+
+            renderMaterialModalStep(step, val = null) {
+                const container = document.getElementById('materialModalContent');
+                const tableContainer = document.getElementById('materialModalTableContainer');
+
+                if (step === 1) {
+                    this.matStepFilters = {};
+                    tableContainer.style.display = 'none';
+                    container.style.display = 'grid';
+                    const tipi = [...new Set(this.state.materiali.map(m => m.tipo))];
+                    container.innerHTML = tipi.map(t => `
+                        <div class="card" onclick="app.renderMaterialModalStep(2, '${t}')" style="cursor:pointer; text-align:center; padding:24px; transition:all 0.3s ease;">
+                            <div style="font-size:2.5rem; margin-bottom:12px;">🏗️</div>
+                            <h3 style="margin:0; font-weight:900; color:var(--primary);">${t}</h3>
+                        </div>
+                    `).join('');
+                } else if (step === 2) {
+                    this.matStepFilters.tipo = val;
+                    const sezioni = [...new Set(this.state.materiali.filter(m => m.tipo === val).map(m => m.sezione))];
+                    container.innerHTML = sezioni.map(s => `
+                        <div class="card" onclick="app.renderMaterialModalStep(3, '${s}')" style="cursor:pointer; text-align:center; padding:24px;">
+                            <div style="font-size:2rem; margin-bottom:12px;">📐</div>
+                            <h3 style="margin:0; font-weight:800;">${s}</h3>
+                        </div>
+                    `).join('');
+                } else if (step === 3) {
+                    this.matStepFilters.sezione = val;
+                    const matches = this.state.materiali.filter(m => m.tipo === this.matStepFilters.tipo && m.sezione === val);
+                    const tipoSezioni = [...new Set(matches.map(m => m.tipoSezione || 'DETTAGLIO'))];
+
+                    if (tipoSezioni.length === 1 && tipoSezioni[0] === 'DETTAGLIO') {
+                        this.showMaterialList(matches);
+                    } else {
+                        container.innerHTML = tipoSezioni.map(ts => `
+                            <div class="card" onclick="app.showMaterialListByTipoSezione('${ts}')" style="cursor:pointer; text-align:center; padding:24px;">
+                                <div style="font-size:1.8rem; margin-bottom:12px;">📌</div>
+                                <h3 style="margin:0; font-weight:700;">${ts}</h3>
+                            </div>
+                        `).join('');
+                    }
+                }
+                this.updateMaterialBreadcrumb();
+            },
+
+            showMaterialListByTipoSezione(ts) {
+                this.matStepFilters.tipoSezione = ts;
+                const matches = this.state.materiali.filter(m =>
+                    m.tipo === this.matStepFilters.tipo &&
+                    m.sezione === this.matStepFilters.sezione &&
+                    (m.tipoSezione === ts || (ts === 'DETTAGLIO' && !m.tipoSezione))
+                );
+                this.showMaterialList(matches);
+            },
+
+            showMaterialList(matches) {
+                const container = document.getElementById('materialModalContent');
+                const tableContainer = document.getElementById('materialModalTableContainer');
+                const body = document.getElementById('materialModalTableBody');
+
+                container.style.display = 'none';
+                tableContainer.style.display = 'block';
+
+                matches.sort((a, b) => a.misura.localeCompare(b.misura, undefined, { numeric: true }));
+
+                body.innerHTML = matches.map(m => `
+                    <tr>
+                        <td style="padding-left:24px;">
+                            <div style="font-weight:900; font-size:1rem; color:var(--text-main);">${m.misura}</div>
+                            <div style="font-size:0.7rem; color:var(--text-muted);">ID: ${m.id} • ${m.fornitore}</div>
+                        </td>
+                        <td>
+                            <div class="badge" style="background:var(--bg-body); border:1px solid var(--border); color:var(--text-main);">${m.sezione} ${m.tipoSezione || ''}</div>
+                        </td>
+                        <td>
+                            <div style="display:flex; align-items:center; gap:8px;">
+                                <div style="width:8px; height:8px; border-radius:50%; background:${m.quantitaMagazzino > 10 ? 'var(--success)' : 'var(--error)'}"></div>
+                                <span style="font-weight:700;">${m.quantitaMagazzino} PZ</span>
+                            </div>
+                        </td>
+                        <td style="text-align:right; padding-right:24px;">
+                            <button class="btn btn-primary btn-small" onclick="app.confermaSelezioneMateriale('${m.id}', '${m.tipo} ${m.sezione} ${m.misura}')">SELEZIONA</button>
+                        </td>
+                    </tr>
+                `).join('');
+                this.updateMaterialBreadcrumb();
+            },
+
+            updateMaterialBreadcrumb() {
+                const bc = document.getElementById('materialModalBreadcrumb');
+                let html = `<span onclick="app.renderMaterialModalStep(1)" style="cursor:pointer; color:var(--primary);">MATERIALI</span>`;
+                if (this.matStepFilters.tipo) html += ` <i data-lucide="chevron-right" style="width:12px;"></i> <span onclick="app.renderMaterialModalStep(2, '${this.matStepFilters.tipo}')" style="cursor:pointer; color:var(--primary);">${this.matStepFilters.tipo}</span>`;
+                if (this.matStepFilters.sezione) html += ` <i data-lucide="chevron-right" style="width:12px;"></i> <span onclick="app.renderMaterialModalStep(3, '${this.matStepFilters.sezione}')" style="cursor:pointer; color:var(--primary);">${this.matStepFilters.sezione}</span>`;
+                if (this.matStepFilters.tipoSezione) html += ` <i data-lucide="chevron-right" style="width:12px;"></i> <span style="color:var(--text-main);">${this.matStepFilters.tipoSezione}</span>`;
+                bc.innerHTML = html;
+                lucide.createIcons({ parent: bc });
+            },
+
+            confermaSelezioneMateriale(id, label) {
+                const input = document.getElementById(`mat-select-${this.tempMatRowIdx}`);
+                const display = document.getElementById(`display-mat-select-${this.tempMatRowIdx}`);
+                if (input && display) {
+                    input.value = id;
+                    display.textContent = label;
+                    display.style.color = 'var(--text-main)';
+                    display.style.borderColor = 'var(--primary)';
+                    this.checkMaterialAvailability(document.querySelector(`#mat-row-${this.tempMatRowIdx} .materialeQty`), this.tempMatRowIdx);
+                }
+                this.chiudiMaterialModal();
+                this.updateNuovaCommessaSummary();
+            },
+
+            riorganizzaTasks() {
+                this.mostraNotifica('Analisi intelligente workflow...', 'info');
+                let reassignments = 0;
+                let unblocks = 0;
+
+                // 1. Sblocca logicamente le prime task di ogni commessa non ancora pronte
+                this.state.commesse.forEach(c => {
+                    if (c.tasks.length > 0 && c.tasks[0].stato === 'BLOCCATA') {
+                        c.tasks[0].stato = 'PRONTA';
+                        unblocks++;
+                    }
+                    // Sblocca task n+1 se n è completata
+                    c.tasks.forEach((t, i) => {
+                        if (t.stato === 'BLOCCATA' && i > 0 && c.tasks[i - 1].stato === 'COMPLETATA') {
+                            t.stato = 'PRONTA';
+                            unblocks++;
+                        }
+                    });
+                });
+
+                // 2. Riassegna dipendenti idle a task pronte
+                this.state.dipendenti.forEach(dip => {
+                    const tasksMiei = this.state.commesse.flatMap(c => c.tasks).filter(t => t.dipendenteId === dip.id);
+                    const taskInCorso = tasksMiei.find(t => t.stato === 'IN_CORSO');
+
+                    if (!taskInCorso) {
+                        const miaPronta = tasksMiei.find(t => t.stato === 'PRONTA');
+
+                        if (!miaPronta) {
+                            // Cerca task PRONTA nel sistema che può fare
+                            const taskProntaSistema = this.state.commesse.flatMap(c => c.tasks).find(t =>
+                                t.stato === 'PRONTA' &&
+                                (!t.dipendenteId || this.isDipendenteBusy(t.dipendenteId)) &&
+                                dip.mansioniId.includes(t.mansioneId)
+                            );
+
+                            if (taskProntaSistema) {
+                                taskProntaSistema.dipendenteId = dip.id;
+                                reassignments++;
+                            }
+                        }
+                    }
+                });
+
+                this.salvaSuLocalStorage();
+                if (reassignments > 0 || unblocks > 0) {
+                    this.mostraNotifica(`Ottimizzazione: ${unblocks} task sbloccate e ${reassignments} riassegnate.`, 'success');
+                } else {
+                    this.mostraNotifica('Flusso di lavoro già ottimale.', 'info');
+                }
+
+                if (this.currentView === 'dashboard') {
+                    this.renderDashboard(document.querySelector('.main-container'));
+                }
+            },
+
+            isDipendenteBusy(dipId) {
+                return this.state.commesse.flatMap(c => c.tasks).some(t => t.dipendenteId === dipId && t.stato === 'IN_CORSO');
             },
 
             creaCommessa() {
@@ -3898,7 +4526,8 @@
                     const articolo = document.getElementById('articolo').value.trim();
                     const descrizione = document.getElementById('descrizione').value.trim();
                     const dataConsegna = document.getElementById('dataConsegna').value;
-                    const priorita = document.getElementById('priorita').value;
+                    const priorita = this.tempPriorita || 'MEDIA';
+
 
                     // 1. Validazione Campi Base
                     if (!clienteId) return this.mostraNotifica('⚠️ Seleziona un cliente', 'error');
@@ -5685,7 +6314,50 @@
         <div class="footer">
             <div>STEFANO GALBIATI • INDUSTRIE</div>
             <div>${new Date().toLocaleDateString()}</div>
+        </div><!-- Close App-Initialized -->
+
+        <!-- MODALE SELEZIONE MATERIALE TECNICA -->
+        <div id="materialModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:9000; align-items:center; justify-content:center; backdrop-filter:blur(10px);">
+            <div class="card" style="width:90%; max-width:1000px; max-height:90vh; display:flex; flex-direction:column; padding:0; overflow:hidden; box-shadow:0 0 50px rgba(0,0,0,0.5);">
+                <div style="padding:24px; background:var(--primary); color:white; display:flex; justify-content:space-between; align-items:center;">
+                    <div style="display:flex; align-items:center; gap:15px;">
+                        <div style="width:40px; height:40px; background:white; color:var(--primary); border-radius:10px; display:flex; align-items:center; justify-content:center;">
+                            <i data-lucide="search"></i>
+                        </div>
+                        <div>
+                            <h2 style="margin:0; font-size:1.2rem; font-weight:900; letter-spacing:0.05em;">RICERCA TECNICA MATERIALE</h2>
+                            <p style="margin:0; font-size:0.75rem; opacity:0.8;">Navigazione gerarchica per specifica materiale</p>
+                        </div>
+                    </div>
+                    <button onclick="app.chiudiMaterialModal()" style="background:rgba(255,255,255,0.2); border:none; color:white; width:36px; height:36px; border-radius:50%; cursor:pointer; font-weight:900;">✕</button>
+                </div>
+                
+                <div id="materialModalBreadcrumb" style="padding:12px 24px; background:var(--bg-body); border-bottom:1px solid var(--border); display:flex; gap:10px; align-items:center; font-size:0.7rem; font-weight:800; color:var(--text-muted);">
+                    <!-- Breadcrumbs filled by JS -->
+                </div>
+
+                <div id="materialModalContent" style="padding:32px; flex:1; overflow-y:auto; display:grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap:20px;">
+                    <!-- Content filled by JS -->
+                </div>
+                
+                <div id="materialModalTableContainer" style="display:none; flex:1; overflow:hidden;">
+                     <table class="mag-table" style="width:100%; border-collapse:collapse;">
+                        <thead style="position:sticky; top:0; background:var(--bg-body); z-index:10;">
+                            <tr>
+                                <th style="text-align:left; padding-left:24px;">Specifiche</th>
+                                <th>Tipologia</th>
+                                <th>Disponibilità</th>
+                                <th style="text-align:right; padding-right:24px;">Azioni</th>
+                            </tr>
+                        </thead>
+                        <tbody id="materialModalTableBody">
+                            <!-- Table rows filled by JS -->
+                        </tbody>
+                     </table>
+                </div>
+            </div>
         </div>
+
         <script>
                             setTimeout(() => {
                                 QRCode.toCanvas(document.getElementById('qrcode'),'${taskId}', { margin: 1, scale: 4 }, function(error) {
